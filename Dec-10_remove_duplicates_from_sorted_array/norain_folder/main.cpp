@@ -8,11 +8,8 @@
 //nums = [0,0,1,1,1,2,2,3,3,4]
 
 
-int main(void){                     //                           fast 
-                                    //  slow              
+int main(void){  
     std::vector<int> vec{0,    0,   1,   1,   1,   2,   2,  2,  3};
-                        //{0,    1,   2,  3,  }
-                        //o)(n)
     int slow=0;
     for(int fast=0; fast<vec.size(); fast++){
         if(vec[fast]!=vec[slow]){
