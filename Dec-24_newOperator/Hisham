@@ -1,0 +1,28 @@
+#include<iostream>
+
+       
+class Car{
+    public:
+        std::string name;
+        int number;
+
+        Car(std::string n, int nu){
+            name = n;
+            number = nu;
+        }
+
+        void print_info(void){
+            std::cout<<"The brand of this car is "<<name<<std::endl;
+            std::cout<<"The number of the car is "<<number<<std::endl;
+        }
+};
+
+
+
+int main(){
+    Car my_car("Corolla", 2222); 
+    Car* car_pointer = new Car("BYD", 6666); 
+    my_car.print_info();
+    car_pointer->print_info();
+    return 0;
+}
