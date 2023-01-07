@@ -1,0 +1,64 @@
+#include<iostream>
+
+
+class Person {
+    public:
+         virtual void speak(void) = 0;
+
+};
+
+
+class Syrian:public Person{
+    public:
+        void speak(void){
+            std::cout<<"I speak syrian"<<std::endl;
+        }
+};
+
+class American:public Person{
+    public:
+        void speak(void){
+            std::cout<<"I speak American"<<std::endl;
+        }
+};
+
+class English:public Person{
+    public:
+        void speak(void){
+            std::cout<<"I speak English"<<std::endl;
+        }
+};
+
+int main()
+{
+
+Person* person_pointer;
+
+char nationality;
+
+std::cout<<"Enter nationality .... "<<std::endl;
+std::cin>>nationality;
+
+switch (nationality)
+{
+case 's':
+    person_pointer = new Syrian;
+       break;
+
+case 'a':
+    person_pointer = new American;
+       break;
+
+default:
+    std::cout<<"The input nationality is valid"<<std::endl;
+    std::cout<<"The nationality is English"<<std::endl;
+    person_pointer= new English;
+
+        break;
+}
+
+person_pointer->speak();
+
+
+    return 0;
+}
