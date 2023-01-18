@@ -1,0 +1,21 @@
+#include<iostream>
+
+     
+
+int main(){
+    char* p1;
+    char* p2;
+
+    char x=72,y;
+    p1= &x;
+
+    y=*p1+5 ;
+    p2= &y;
+
+    std::cout<<"p1= "<<(long long)p1<<" x="<< *p1<<std::endl;
+    std::cout<<"p2= "<<(long long)p2<<" y="<< *p2 <<std::endl;
+    p1++;
+    std::cout<<"new p1 is "<<(long long)p1<<std::endl;
+
+    return 0;
+}
