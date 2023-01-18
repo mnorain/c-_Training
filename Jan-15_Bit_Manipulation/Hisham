@@ -1,0 +1,38 @@
+#include<iostream>
+#include <bitset>
+
+int main()
+{
+   uint8_t a =121;
+   uint8_t b= 5;
+   int c,d;
+
+    std::cout<<"a(Desimal Number)= "<<(int)a<<std::endl;
+    std::cout << "a(Binary Number) = " << std::bitset<8>(a)  << std::endl;
+    std::cout<<"b(Desimal Number)= "<<(int)b<<std::endl;
+    std::cout << "b(Binary Number) = " << std::bitset<8>(b)  << std::endl;
+
+    std::cout << "Enter c(Desimal Number) less than 512    " ;  
+    std::cin>>c; 
+    std::cout << std::endl;
+
+    std::cout << "Enter d(Desimal Number) less than 512    " ;  
+    std::cin>>d; 
+
+    std::cout<<"c(Desimal Number)= "<<(int)c<<std::endl;
+    std::cout << "c(Binary Number) = " << std::bitset<8>(c) << std::endl;
+
+    std::cout<<"d(Desimal Number)= "<<(int)d<<std::endl;
+    std::cout << "d(Binary Number) = " << std::bitset<8>(d) << std::endl;
+
+    //bitwise And
+    std::cout << "c & d = " << std::bitset<8>(c&d) << std::endl;
+
+    //bitwise Or
+    std::cout << "c or d = " << std::bitset<8>(c|d) << std::endl;
+
+    //bitwise Not
+    std::cout << "Not c = " << std::bitset<8>(~c) << std::endl;
+    std::cout << "Not d = " << std::bitset<8>(~d) << std::endl;
+    return 0;
+}
